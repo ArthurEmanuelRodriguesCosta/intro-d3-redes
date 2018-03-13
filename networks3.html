@@ -52,19 +52,58 @@
 
 			<div class="row">
 				<div class="col-md-8">
+					<h3> Sobre a rede <h3>
+					<p>
+						A rede foi formada a partir dos artistas relacionadas com a banda Angra, que é brasileira e é, na maioria das vezes,
+						referenciada como do gênero de Power Metal. O tamanho do nó é proporcional a quantidade de links que este possui.
+						Ademais, o nó que representa a banda está destacado em vermelho.
+					<p>
 					<h3>Algumas observações</h3>
-					<p>Para esse exemplo, usamos dados de quais artistas são semelhantes a quais da API do Spotify. A partir de um artista inicial, usamos um programa que pega artistas semelhantes a ele, e semelhantes a estes, até atingir um limite. Faça hover para entender quais.</p>
-					<h3>Topologia</h3>
-					<p>Você consegue perceber uma estrutura em comunidades no grafo? Se sim, dá para interpretar as comunidades? Os dados do spotify refletem seu conhecimento sobre esses artistas?</p>
-					<h3>Melhore</h3>
-					<p>Sua missão aqui é personalizar e tornar mais legível a visualização. Para isso faça o seguinte:</p>
-					<ol>
-						<li>Mude os dados. Nessa visualização, estou usando os dados do backend desse <a href="http://labs.polsys.net/playground/spotify/">sistema aqui</a>. A forma como chego no json é (a) fazendo uma busca com o endpoint getartists:  http://labs.polsys.net/playground/spotify/getartists.php?query=Mc%20Loma , (b) vendo o id do artista que me interessa, e depois usando esse outro endpoint e salvando o json: http://labs.polsys.net/playground/spotify/getnet.php?id=6tdM5Njlln7nWkonCppW0u . Tudo no navegador  </li>
-						<li>Mude as forças. Como no exemplo anterior</li>
-						<li>Você pode também filtrar fora nós e links. O tamanho do nó é proporcional à popularidade do artista. Javascript tem uma função filter() nos arrays</li>
-						<li>Brinque à vontade com o css. As vezes tirar a ênfase dos links ajuda, as vezes deixar nós transparentes. Quer mudar o tamanho deles também? Cor? Vai lá.</li>
-					</ol>
-					<p>Aqui o principal é que você experimente com como tornar um grafo mais legível e comunicar sua análise.</p>
+					<p>
+						A princípio, percebe-se que existe um grupo no centro muito conectado e genérico, que está ligado a banda que foi pesquisada (Angra).
+						Ao analisar os nós próximos a ela, percebemos que os dados do spotify realmente refletem as semelhanças entre as bandas.
+						Com exemplos como: Almah e André Matos. Um sendo uma banda formada por um ex-integrante da banda e o outro sendo o nome
+						dado a carreira solo de um outro ex-integrante, ambos continuaram com um estilo bastante parecido com o Angra. Devido a sua alta densidade
+						esse grupo torna-se mais genérico e, consequentemente, não foram encontrados padrões que o caracterizem.
+					</p>
+
+					<p>
+						Além disso, é interessante notar que bandas que são grandes influências para o estilo de Power Metal, como Helloween e Manowar,
+						situam-se nas proximidades da banda escolhida como base. Ainda sobre o grande grupo do centro, percebe-se que este ramifica-se
+						para cima, porém fica menos conectado. Ao analisar essa parte da rede, encontra-se artistas de gênero parecido, ou seja, "metal",
+						no entanto, são figuras de outras ramificações desse estilo, como Dio e Dream Theater.
+					</p>
+
+					<p>
+						Além da núvem super conectada, existem 5 grupos que são visivelmente destacados na rede. Destes, os dois grupos da direita não serão
+						tratados com mais profundidade aqui, pois exigiriam uma maior pesquisa sobre os artistas, dado que não há conhecimento prévio destes.
+						No entanto, os 3 grupos da esquerda apresentam características marcantes que podem ser destacadas aqui.
+					</p>
+
+					<p>
+						No grupo do canto inferior esquerdo, há artistas que, aparentemente, são relacionados devido ao seu gênero característico, o Metal
+						Sinfônico. Nightwish, Apocalyptica, Epica e Tarja encontram-se nesse grupo e são grandes expoentes desse gênero. Também percebe-se que
+						Nightwish e Apocalyptica são as pontes que conectam esse grupo ao grande grupo mais genérico, é interessante pensar que o último possui
+						diversos covers de grandes clássicos do gênero metal, o que pode explicar a sua posição.
+					</p>
+
+					<p>
+						Acima do último grupo mencionado, está um que pode ser nomeado como o grupo "brasileirinho", devido ao fato de ser totalmente formado por bandas brasileiras.
+						Com nomes como: Raimundos, Hermes e Renato, Matanza, Ultraje a Rigor, Rogério Skylab e até mesmo Falcão. Vale salientar que a banda que mostra-se como uma ponte
+						nesse grupo é Massacration, uma banda que contemporânea de vários desses artistas, inclusive do Angra.
+					</p>
+
+					<p>
+						Por fim, temos o grupo mais acima e a esquerda, o qual possui mais uma característica marcante. Os artistas aqui não estão ligados apenas por gênero ou por nacionalidade
+						e épocas de auge, mas sim por um ponto ainda mais abstrato. Aqui percebe-se que todos os integrantes são guitarristas famosos por bandas que participaram ou simplesmente
+						pelas suas habilidades individuais. Os grandes nomes presentes são: Marty Friedman, Eric Johnson, Steve Vai, Joe Satriani e Paul Gilbert. Além desses grandes nomes clássicos
+						do gênero, percebe-se que Kiko Loureiro é um ponte para esse grupo, sendo ele um famoso guitarrista brasileiro.
+					</p>
+
+					<p>
+						Portanto, percebe-se a que a rede pode representar relações demasiadamente complexas. Desde artistas que se assemelham em gênero, até artistas que assemelham-se em nacionalidade
+						e instrumentos de especialidade. Com isso, pode-se entender como estão dispostas as relações entre tais artistas, segundo a API do spotify.
+					</p>
 				</div>
 			</div>
 		</div>
